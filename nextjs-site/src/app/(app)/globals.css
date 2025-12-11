@@ -1,0 +1,54 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --animate-aurora: aurora 60s linear infinite;
+  @keyframes aurora {
+    from {
+      background-position:
+        50% 50%,
+        50% 50%;
+    }
+    to {
+      background-position:
+        350% 50%,
+        350% 50%;
+    }
+  }
+}
+
+@theme inline {
+  --breakpoint-3xl: 112.5rem;
+  --breakpoint-4xl: 120rem;
+  --color-foreground: #ffffff;
+  --color-black: #2a2526;
+  --color-white: whitesmoke;
+  --font-inter: var(--font-inter);
+  --font-alike-angular: var(--font-alike-angular);
+  --header-height: 4.5rem;
+}
+
+@layer components {
+  .container {
+    @apply mx-auto w-full max-w-7xl px-8 lg:px-16 xl:px-20 2xl:px-24 3xl:px-32;
+  }
+  .grid-cols-12 {
+    @apply gap-2 md:gap-4 xl:gap-6;
+  }
+  .grid-cols-1 {
+    @apply gap-12 lg:gap-22;
+  }
+}
+
+html {
+  font-size: clamp(14px, 0.75vw + 8px, 25px);
+}
+
+body {
+  font-family: var(--font-inter);
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
