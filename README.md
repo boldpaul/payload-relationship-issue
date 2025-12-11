@@ -14,3 +14,15 @@ Both the Project and Case Study with ID 1 will appear as selected in the dropdow
 ### Root Cause:
 Payload CMS's relationship field admin UI determines selection state using only the entry ID, without considering which collection the entry belongs to. When storing relationship data, Payload correctly saves both relationTo (collection) and value (ID), but the selection UI logic fails to scope the selection check by collection.
 Workarounds:
+
+# Recreating the issue:
+
+Navigate to the project's root directory and run ``` npm install ``` & ``` npm run dev ```
+
+Log into the cms by visiting /admin route, log in as the following user:
+
+```
+user: test@email.com
+pass: 123
+```
+and visit this route: http://localhost:3000/admin/collections/projects/1
