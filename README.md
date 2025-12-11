@@ -25,4 +25,13 @@ Log into the cms by visiting /admin route, log in as the following user:
 user: test@email.com
 pass: 123
 ```
-and visit this route: http://localhost:3000/admin/collections/projects/1
+and visit this route: 
+```
+http://localhost:3000/admin/collections/projects/1
+```
+
+Now in the CTA content block, you'll see the destination drop down. If you click it, you'll notice that both id 1's are selected except the button on the frontend, actually only links to one of them.
+Here's the frontend url: 
+```
+http://localhost:3000/projects/project-1
+```
