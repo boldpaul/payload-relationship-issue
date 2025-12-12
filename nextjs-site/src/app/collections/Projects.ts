@@ -4,6 +4,7 @@ import { topLevelBlocks, recursiveBlock } from '../../lib/sharedBlocks'
 
 export const Projects: CollectionConfig= {
     slug: 'projects',
+    admin: { useAsTitle: 'title' }, 
     fields: [
       {
         name: 'slug',

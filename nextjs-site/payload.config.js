@@ -23,6 +23,7 @@ export default buildConfig({
   db: sqliteAdapter({
     // SQLite-specific arguments go here.
     // `client.url` is required.
+    idType: 'uuid',
     client: {
       url: process.env.DATABASE_URL || '',
       authToken: process.env.DATABASE_AUTH_TOKEN,

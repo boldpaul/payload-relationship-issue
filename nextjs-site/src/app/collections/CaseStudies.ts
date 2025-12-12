@@ -3,6 +3,7 @@ import { topLevelBlocks, recursiveBlock } from '../../lib/sharedBlocks'
 
 export const CaseStudies: CollectionConfig= {
     slug: 'caseStudies',
+    admin: { useAsTitle: 'title' }, 
     fields: [
       {
         name: 'slug',
